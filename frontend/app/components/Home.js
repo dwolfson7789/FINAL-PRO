@@ -1,10 +1,12 @@
 import React from 'react';
 import axios from 'axios';
-import the rest containers and shit.
+import LocationContainer from '../containers/LocationContainer';
+import APIListsContainer from './APIEventsLists/APIListsContainer';
 
 const Home = React.createClass({
   getInitialState: function(){
     return {
+      <div className='hello'>Hello World</div>
       // ajaxreturn: []
       //uncomment this out
     }
@@ -17,25 +19,11 @@ const Home = React.createClass({
     return(
       <div className="home">
         <p>Home</p>
-      </div>
-    )
-  }
-});
-export default Home;
-
-
-//dont mind below this comment line.
-
-  render: function() {
-    return (
-      <div className="home">
-        <p>Home</p>
-        <LocationContainer />
-        <br></br>
-        <RestaurantContainer />
+        <Nav />
         <br></br>
         <APIListsContainer />
       </div>
     )
   }
 });
+export default Home;
