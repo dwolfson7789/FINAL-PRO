@@ -5,8 +5,7 @@ const APIListsContainer = React.createClass({
   render: function(){
     return (
       <div className='api-lists-container'>
-        <Google />
-
+        <h1>Suh Dude!!!</h1>
       </div>
     )
   }
