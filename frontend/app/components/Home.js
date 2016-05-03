@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import the rest containers and shit.
+import Map from './Map';
+// import the rest containers and shit.
 
 const Home = React.createClass({
   getInitialState: function(){
@@ -23,19 +24,19 @@ const Home = React.createClass({
 });
 export default Home;
 
-
-//dont mind below this comment line.
-
-  render: function() {
-    return (
-      <div className="home">
-        <p>Home</p>
-        <LocationContainer />
-        <br></br>
-        <RestaurantContainer />
-        <br></br>
-        <APIListsContainer />
-      </div>
-    )
-  }
-});
+//
+// //dont mind below this comment line.
+//
+//   render: function() {
+//     return (
+//       <div className="home">
+//         <p>Home</p>
+//         // <LocationContainer />
+//         // <br></br>
+//         // <RestaurantContainer />
+//         // <br></br>
+//         <Map />
+//       </div>
+//     )
+//   }
+// });
