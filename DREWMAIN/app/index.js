@@ -4,5 +4,5 @@ import routes from './utilities/routes';
 
 ReactDOM.render(
   routes,
-  document.getElementById('map')
+  document.getElementById('app')
 );

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
+import Title from './Title';
 
 
 const Home  = React.createClass({
@@ -12,7 +13,7 @@ const Home  = React.createClass({
         let userLat = position.coords.latitude;
         let userLong = position.coords.longitude;
       L.mapbox.accessToken = 'pk.eyJ1IjoiZHJld3dvbGZzb24xIiwiYSI6ImNpbnFoNHYyNjEwNTl1a2x5Mmw4Y2djZG8ifQ.B7cFyV9ktmmLD0y9bdUhIw';
-    Window.map = L.mapbox.map('map', 'mapbox.streets').setView(([userLat, userLong]||[40.7527, -73.9772]), 15);
+    Window.map = L.mapbox.map('map', 'mapbox.streets').setView(([userLat, userLong]||[40.7527, -73.9772]), 20);
     L.mapbox.featureLayer({
     type: 'Feature',
     geometry: {
@@ -41,15 +42,6 @@ const Home  = React.createClass({
       fontFamily: "helvetica",
       color: "black"
     }
-    const StyleHeader = {
-
-    
-      textAlign: "center",
-      fontSize: "20px",
-      margin: "15px 50px 0px 50px",
-      textShadow: '4px -2px 4px rgba(0, 0, 0, 1)',
-      color: "black"
-    }
     const StyleData = {
       width: '25vw',
       zIndex: '3000',
@@ -60,7 +52,7 @@ const Home  = React.createClass({
 
     return(
       <div style={StyleAll}>
-        <h1 style={StyleHeader}>DREW</h1>
+        <Title />
         <div id='map'></div>
         <div style={StyleData}>{this.props.children}</div>
       </div>
