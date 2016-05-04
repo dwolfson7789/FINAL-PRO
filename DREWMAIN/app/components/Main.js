@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './Home';
-// import Style from '../styles/Style';
+// require("../utilities/Styles.css")
 
 const Main = React.createClass({
   render: function(){
