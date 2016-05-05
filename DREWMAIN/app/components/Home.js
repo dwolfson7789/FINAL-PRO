@@ -1,6 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router';
 import Title from './Title';
+import Nav from './Nav';
+import Search from './Search';
+require("../utilities/Styles.css");
 
 
 const Home  = React.createClass({
@@ -13,7 +16,7 @@ const Home  = React.createClass({
         let userLat = position.coords.latitude;
         let userLong = position.coords.longitude;
       L.mapbox.accessToken = 'pk.eyJ1IjoiZHJld3dvbGZzb24xIiwiYSI6ImNpbnFoNHYyNjEwNTl1a2x5Mmw4Y2djZG8ifQ.B7cFyV9ktmmLD0y9bdUhIw';
-    Window.map = L.mapbox.map('map', 'mapbox.streets').setView(([userLat, userLong]||[40.7527, -73.9772]), 20);
+    Window.map = L.mapbox.map('map', 'mapbox.streets').setView(([userLat, userLong]||[40.7527, -73.9772]), 17);
     L.mapbox.featureLayer({
     type: 'Feature',
     geometry: {
@@ -28,33 +31,19 @@ const Home  = React.createClass({
       'marker-size': 'large',
       'marker-color': '#f86767',
       'marker-symbol': 'star'
-    }
+    },
   }).addTo(Window.map);
   })
   },
 
   render: function(){
-    const StyleAll = {
-      margin: '0',
-      boxSizing: 'border-box',
-      padding: "0",
-      textAlign: 'center',
-      fontFamily: "helvetica",
-      color: "black"
-    }
-    const StyleData = {
-      width: '25vw',
-      zIndex: '3000',
-      float: 'right',
-      marginRight: '2vw',
-      background: "rgba(1,1,1,0.75)",
-    }
 
     return(
-      <div style={StyleAll}>
+      <div>
         <Title />
+        <Nav />
         <div id='map'></div>
-        <div style={StyleData}>{this.props.children}</div>
+        <div>{this.props.children}</div>
       </div>
     )
   }
