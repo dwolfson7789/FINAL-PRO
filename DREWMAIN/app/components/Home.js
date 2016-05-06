@@ -50,15 +50,34 @@ const Home  = React.createClass({
           },
           properties: {
             title: 'Flatiron Lounge',
-            description: '1718 14th St NW, Washington, DC',
+            description: 'Place is popping here quick! POST TIME: 10:00PM  5/6/16',
+
             // one can customize markers by adding simplestyle properties
             // https://www.mapbox.com/guides/an-open-platform/#simplestyle
             'marker-size': 'large',
             'marker-color': '#BE9A6B',
             'marker-symbol': 'bar'
-          }
-        }
+          },
+        },
+        {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [-73.9904278, 40.7445271
+            ]
+          },
+          properties: {
+            title: 'The Flatiron Room',
+            description: 'BEST BURGER EVER',
+            // one can customize markers by adding simplestyle properties
+            // https://www.mapbox.com/guides/an-open-platform/#simplestyle
+            'marker-size': 'large',
+            'marker-color': '#BE9A6B',
+            'marker-symbol': 'restaurant'
+          },
+        },
       ])
+
       .addTo(Window.map);
       // L.mapbox.featureLayer().addTo(Window.map);
   //

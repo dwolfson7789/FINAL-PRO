@@ -8,6 +8,7 @@ require("../utilities/Styles.css")
 const FormComponent = React.createClass({
   render: function(){
     return(
+      <div className="form">
 
     <div className="dropdown">
     <br/>
@@ -32,7 +33,7 @@ const FormComponent = React.createClass({
      <br />
       <br />
 
-<div className="formcomponent">
+<div className="searchcomponent">
    <input type="radio" name="chosen-radio"
             className="places-radio" value="museum"
             onChange={this.props.updateValState}
@@ -56,6 +57,7 @@ const FormComponent = React.createClass({
           <button className="Submit" onClick={this.props.onSubmit} type='button'>Submit!</button>
           </div>
       </div>
+        </div>
     );
   }
 });
