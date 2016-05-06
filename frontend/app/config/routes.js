@@ -1,10 +1,15 @@
-var express = require('express');
-var app = express();
+import React from 'react';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
-/* expose dist */
-app.use('/', express.static('dist'));
+import Main from '../containers/Main';
+import Home from '../components/Home';
 
-/* only use process env! */
-app.listen(process.env.PORT || 5000, function () {
- console.log('serving up front-end on localhost 5000')
-});
+const routes = (
+  <Router history={hashHistory}>
+    <Route path='/' component={Main}>
+      <IndexRoute component={Home} />
+    </Route>
+  </Router>
+);
+
+export default routes;

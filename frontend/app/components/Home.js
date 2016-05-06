@@ -1,42 +1,27 @@
 import React from 'react';
 import axios from 'axios';
+import LocationContainer from '../containers/LocationContainer';
+import APIListsContainer from './APIEventsLists/APIListsContainer';
 import Map from './Map';
 // import the rest containers and shit.
 
 const Home = React.createClass({
   getInitialState: function(){
-    return {
-      // ajaxreturn: []
-      //uncomment this out
-    }
+    return (
+      <div className='hello'>Hello World</div>
+
+    )
   },
-  ajaxRun: function(){
-    //Run Google Places API for call
-    //this too
-  },
+
   render: function(){
     return(
       <div className="home">
         <p>Home</p>
+        <Nav />
+        <br></br>
+        <APIListsContainer />
       </div>
     )
   }
 });
 export default Home;
-
-//
-// //dont mind below this comment line.
-//
-//   render: function() {
-//     return (
-//       <div className="home">
-//         <p>Home</p>
-//         // <LocationContainer />
-//         // <br></br>
-//         // <RestaurantContainer />
-//         // <br></br>
-//         <Map />
-//       </div>
-//     )
-//   }
-// });

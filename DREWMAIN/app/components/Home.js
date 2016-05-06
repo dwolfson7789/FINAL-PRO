@@ -42,8 +42,6 @@ const Home  = React.createClass({
           type: 'Feature',
           geometry: {
             type: 'Point',
-            // coordinates here are in longitude, latitude order because
-            // x, y is the standard for GeoJSON and many formats
             coordinates: [
                -73.9953862, 40.7400378
             ]
@@ -51,9 +49,6 @@ const Home  = React.createClass({
           properties: {
             title: 'Flatiron Lounge',
             description: 'Place is popping here quick! POST TIME: 10:00PM  5/6/16',
-
-            // one can customize markers by adding simplestyle properties
-            // https://www.mapbox.com/guides/an-open-platform/#simplestyle
             'marker-size': 'large',
             'marker-color': '#BE9A6B',
             'marker-symbol': 'bar'
@@ -69,8 +64,6 @@ const Home  = React.createClass({
           properties: {
             title: 'The Flatiron Room',
             description: 'BEST BURGER EVER',
-            // one can customize markers by adding simplestyle properties
-            // https://www.mapbox.com/guides/an-open-platform/#simplestyle
             'marker-size': 'large',
             'marker-color': '#BE9A6B',
             'marker-symbol': 'restaurant'
