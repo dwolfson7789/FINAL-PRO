@@ -1,14 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,300);
-
+*{
+  font-family: 'Josefin Sans', sans-serif;
+}
 
 img {
   height: 220px;
-  width: 44%;
+  width: 43%;
   padding-bottom: 3px;
 }
 nav {
   text-align: center;
-  background-color: #33A1DE	;
+  background-color: #33A1DE;
   width: 100%;
   height: auto;
   opacity: 0.6;
@@ -17,7 +19,7 @@ nav {
 }
 
 h1 {
-  font-family: 'Cinzel', serif;
+
   text-align: center;
   padding: 10px;
 }
@@ -41,40 +43,39 @@ a {
 }
 select {
     border: 0 none;
-    color: #FFFFFF;
-    background: transparent;
+    color: #33A1DE;
     font-size: 12px;
     font-weight: bold;
     padding: 2px 10px;
     width: 160px;
-    background: #f96e5b;
+    background-color: white;
 
 }
-
 
 #map {
   position:absolute;
   top:0;
   bottom:0;
-  margin-top: 14%;
+  margin-top: 13%;
   width:100%;
-  height: 82%;
-  z-index: -1;
+  height: 87%;
+
 }
 
-
-.dropdown {
+.group {
+  text-align: center;
+}
+.groupPic {
+  padding: 30px;
+  width: 400px;
+  height: 350px;
   font-family: 'Josefin Sans', sans-serif;
-float: right;
-border: 4px solid black;
-opacity: 0.6;
-filter: alpha(opacity=60); /* For IE8 and earlier */
-width: 25%;
-height: 70%;
-text-align: center;
-background-color: grey;
-
+  border-radius: 50%;
 }
+
+
+
+
 
 /*@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
 .cssmenu {

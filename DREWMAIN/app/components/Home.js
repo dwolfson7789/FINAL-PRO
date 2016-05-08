@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import Title from './Title';
-import FormComponent from './FormComponent';
+
 import About from './About';
 // import GetPlaces from './GetAll';
 import Nav from './Nav';
@@ -18,7 +18,7 @@ const Home  = React.createClass({
         let userLat = position.coords.latitude;
         let userLong = position.coords.longitude;
         L.mapbox.accessToken = 'pk.eyJ1IjoiZHJld3dvbGZzb24xIiwiYSI6ImNpbnFoNHYyNjEwNTl1a2x5Mmw4Y2djZG8ifQ.B7cFyV9ktmmLD0y9bdUhIw';
-        Window.map = L.mapbox.map('map', 'mapbox.emerald').setView(([userLat, userLong]||[40.7527, -73.9772]), 17) .addControl(L.mapbox.geocoderControl('mapbox.places', {
+        Window.map = L.mapbox.map('map', 'mapbox.emerald').setView(([userLat, userLong]||[40.7527, -73.9772]), 19) .addControl(L.mapbox.geocoderControl('mapbox.places', {
         autocomplete: true
     })); L.mapbox.featureLayer()
       .setGeoJSON([
@@ -42,13 +42,18 @@ const Home  = React.createClass({
           type: 'Feature',
           geometry: {
             type: 'Point',
+            // coordinates here are in longitude, latitude order because
+            // x, y is the standard for GeoJSON and many formats
             coordinates: [
                -73.9953862, 40.7400378
             ]
           },
           properties: {
             title: 'Flatiron Lounge',
-            description: 'Place is popping here quick! POST TIME: 10:00PM  5/6/16',
+            description: 'Place is popping here quick! - Syed (10:00PM || 5/6/16)',
+
+            // one can customize markers by adding simplestyle properties
+            // https://www.mapbox.com/guides/an-open-platform/#simplestyle
             'marker-size': 'large',
             'marker-color': '#BE9A6B',
             'marker-symbol': 'bar'
@@ -63,12 +68,83 @@ const Home  = React.createClass({
           },
           properties: {
             title: 'The Flatiron Room',
-            description: 'BEST BURGER EVER',
+            description: 'HAD BEST BURGER EVER TONIGHT- 20 MIN WAIT TIME Drew Wolfson (@ 8:30 PM || 5/9/16)',
+            // one can customize markers by adding simplestyle properties
+            // https://www.mapbox.com/guides/an-open-platform/#simplestyle
             'marker-size': 'large',
             'marker-color': '#BE9A6B',
             'marker-symbol': 'restaurant'
           },
         },
+        {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [-73.991812, 40.742282
+            ]
+          },
+          properties: {
+            title: 'Flatiron Hall',
+            description: 'BEST Old Fashioned - Matt Jaikaran (@ 9:55 PM || 5/6/16)',
+            // one can customize markers by adding simplestyle properties
+            // https://www.mapbox.com/guides/an-open-platform/#simplestyle
+            'marker-size': 'large',
+            'marker-color': '#BE9A6B',
+            'marker-symbol': 'bar'
+          },
+        },
+        {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [-73.9968612, 40.7414556
+            ]
+          },
+          properties: {
+            title: 'Chipotle',
+            description: 'Cultural appropriation at its finest - Syed (@ 4:55 PM || 5/5/16)',
+            // one can customize markers by adding simplestyle properties
+            // https://www.mapbox.com/guides/an-open-platform/#simplestyle
+            'marker-size': 'large',
+            'marker-color': '#BE9A6B',
+            'marker-symbol': 'restaurant'
+          },
+        },
+
+        {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [-73.9895844, 40.7440456
+            ]
+          },
+          properties: {
+            title: 'DREAMDRY - Flatiron',
+            description: 'Place is getting packed! (@ 9:00 PM || 6/9/16)',
+            // one can customize markers by adding simplestyle properties
+            // https://www.mapbox.com/guides/an-open-platform/#simplestyle
+            'marker-size': 'large',
+            'marker-color': '#BE9A6B',
+            'marker-symbol': 'bar'
+          },
+        },
+        {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [-73.9923696, 40.7412432
+            ]
+          },
+          properties: {
+            title: 'Museum of Sex',
+            description: 'Boobs! My buddy Aman has a frequent customer card. Who knew?! - Ethan (@ 4:55 PM || 6/9/16)',
+            // one can customize markers by adding simplestyle properties
+            // https://www.mapbox.com/guides/an-open-platform/#simplestyle
+            'marker-size': 'large',
+            'marker-color': '#BE9A6B',
+            'marker-symbol': 'museum'
+          },
+        }
       ])
 
       .addTo(Window.map);
@@ -99,8 +175,6 @@ const Home  = React.createClass({
       <div>
         <Title />
         <Nav />
-        <FormComponent updateValState={this.updateValState}
-        />
         <div id='map'></div>
         <div>{this.props.children}</div>
       </div>

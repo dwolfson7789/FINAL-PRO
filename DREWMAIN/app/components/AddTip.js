@@ -58,7 +58,7 @@ const AddTip = React.createClass({
     return(
       <div className="tip">
         <form onSubmit={this.onSubmitTip}>
-          <h4>Add Restaurant Tip:</h4>
+          <h4>ADD A SITCH:</h4>
           <input onChange={this.onChangeAuthor} placeholder='your name' type='text' /><br/><br/>
           <input onChange={this.onChangeTip} placeholder='tip' type='text' /><br/><br/>
           <button type='submit'>Submit</button>
