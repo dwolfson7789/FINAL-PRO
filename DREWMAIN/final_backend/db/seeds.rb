@@ -11,11 +11,11 @@ Sitch.delete_all
 User.create!([
   {
     name:"Matt Jaikaran",
-    email:"mattjaikaran@gmail.com"
+    email:"matt@gmail.com"
   },
   {
     name:"Drew Wolfson",
-    email:"drewwolfson1@gmail.com"
+    email:"drew@gmail.com"
   },
   {
     name:"Ethan Friedman",
