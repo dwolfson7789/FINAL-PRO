@@ -1,14 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 import {Link} from 'react-router';
-var url = 'http://localhost:3000/';
+var url = 'http://localhost:3000/sitches/new.json';
 
 // function AddTip(props) {
 const AddTip = React.createClass({
 
   getInitialState: function() {
     return {
-      //ajaxReturn: [],
+      ajaxReturn: [],
       searchID: this.props.params.id,
       author: '',
       tip: '',
@@ -31,15 +31,15 @@ const AddTip = React.createClass({
     e.preventDefault();
     console.log("onSubmitTip was called!");
 
-    var restaurantTip = {
+    var addTip = {
       searchID: this.state.searchID,
       author: this.state.author,
       tip: this.state.tip
     };
 
-    console.log('restaurantTip:', restaurantTip);
+    console.log('restaurantTip:', addTip);
 
-    axios.put(url, restaurantTip)
+    axios.put(url, addTip)
     .then(function(response){
       console.log("Response.data:", response.data);
       this.setState({
@@ -58,10 +58,11 @@ const AddTip = React.createClass({
     return(
       <div className="tip">
         <form onSubmit={this.onSubmitTip}>
-          <h4>ADD A SITCH:</h4>
-          <input onChange={this.onChangeAuthor} placeholder='your name' type='text' /><br/><br/>
-          <input onChange={this.onChangeTip} placeholder='tip' type='text' /><br/><br/>
-          <button type='submit'>Submit</button>
+          <h3>ADD A SITCH:</h3> <br/>
+          <br/>
+          <input onChange={this.onChangeUser} placeholder='your name' type='text' /><br/><br/>
+          <input onChange={this.onChangeDescription} placeholder='tip' type='text' /><br/><br/>
+          <button type='submit' onClick={this.onChangeUser}>Submit</button>
           <h4>{this.state.message}</h4>
           <Link to="/">Back to Home</Link>
         </form>

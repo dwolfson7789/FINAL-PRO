@@ -13,7 +13,7 @@ const Home  = React.createClass({
         let userLat = position.coords.latitude;
         let userLong = position.coords.longitude;
         L.mapbox.accessToken = 'pk.eyJ1IjoiZHJld3dvbGZzb24xIiwiYSI6ImNpbnFoNHYyNjEwNTl1a2x5Mmw4Y2djZG8ifQ.B7cFyV9ktmmLD0y9bdUhIw';
-        Window.map = L.mapbox.map('map', 'mapbox.emerald').setView(([userLat, userLong]||[40.7527, -73.9772]), 19) .addControl(L.mapbox.geocoderControl('mapbox.places', {
+        Window.map = L.mapbox.map('map', 'mapbox.streets').setView(([userLat, userLong]||[40.7527, -73.9772]), 19) .addControl(L.mapbox.geocoderControl('mapbox.places', {
         autocomplete: true
     })); L.mapbox.featureLayer()
       .setGeoJSON([
@@ -152,7 +152,7 @@ const Home  = React.createClass({
             // https://www.mapbox.com/guides/an-open-platform/#simplestyle
             'marker-size': 'large',
             'marker-color': '#BE9A6B',
-            'marker-symbol': 'Bar'
+            'marker-symbol': 'bar'
           },
         },
         {
@@ -169,7 +169,7 @@ const Home  = React.createClass({
             // https://www.mapbox.com/guides/an-open-platform/#simplestyle
             'marker-size': 'large',
             'marker-color': '#BE9A6B',
-            'marker-symbol': 'Restaurant'
+            'marker-symbol': 'restaurant'
           },
         },
         {
@@ -186,7 +186,7 @@ const Home  = React.createClass({
             // https://www.mapbox.com/guides/an-open-platform/#simplestyle
             'marker-size': 'large',
             'marker-color': '#BE9A6B',
-            'marker-symbol': 'Bar'
+            'marker-symbol': 'bar'
           },
         },
         {
@@ -203,7 +203,7 @@ const Home  = React.createClass({
             // https://www.mapbox.com/guides/an-open-platform/#simplestyle
             'marker-size': 'large',
             'marker-color': '#BE9A6B',
-            'marker-symbol': 'Bar'
+            'marker-symbol': 'bar'
           },
         },
         {
@@ -220,7 +220,7 @@ const Home  = React.createClass({
             // https://www.mapbox.com/guides/an-open-platform/#simplestyle
             'marker-size': 'large',
             'marker-color': '#BE9A6B',
-            'marker-symbol': 'Restaurant'
+            'marker-symbol': 'restaurant'
           },
         },
         {
@@ -233,11 +233,12 @@ const Home  = React.createClass({
           properties: {
             title: 'Bar Veloce',
             description: 'Good drinks, always busy. Not much of a wait, 10 mins or so. - Drew (@ 11:45 PM || 4/25/16)',
+
             // one can customize markers by adding simplestyle properties
             // https://www.mapbox.com/guides/an-open-platform/#simplestyle
             'marker-size': 'large',
             'marker-color': '#BE9A6B',
-            'marker-symbol': 'Bar'
+            'marker-symbol': 'bar'
           },
         }
       ])

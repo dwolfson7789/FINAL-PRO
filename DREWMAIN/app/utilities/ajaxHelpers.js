@@ -24,10 +24,10 @@ const helpers = {
     return axios.get('http://localhost:3000/sitches.json');
   },
   getSitch: function(){
-    return axios.get('http://localhost:3000/sitches/',+id)
+    return axios.get('http://localhost:3000/sitches/' + id)
   },
-  addSitch: function(sitch){
-    return axios.post('http://localhost:3000/sitches/new/', sitch);
+  addSitch: function(addTip){
+    return axios.post('http://localhost:3000/sitches.json', addTip);
   },
   deleteSitch: function(sitch){
     return axios.delete('http://localhost:3000/sitches/', sitch);
