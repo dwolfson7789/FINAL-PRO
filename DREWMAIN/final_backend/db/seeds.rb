@@ -64,4 +64,24 @@ Sitch.create!([
     website: "http://www.moma.org/",
     marker_symbol: "M"
   },
+
 ])
+#
+# Comment.create!([
+#   {
+#     body: "MoMA sucks donkey balls",
+#     user_id: 1,
+#     sitch_id: 3
+#   }
+#   ])
+#
+#   rails g model Comment body:string user:references sitch:references
+
+#to add a comment, you need to find the
+# @sitch = Sitch.find_one(name: params[sitch_name])
+# @user = User.find_one(name: params[user_name])
+# @comment = Comment.create!(
+#   body: params[body],
+#   user_id: @user.id,
+#   sitch_id: @sitch.id
+# )

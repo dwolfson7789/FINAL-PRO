@@ -1,13 +1,17 @@
 import React from 'react';
+<<<<<<< HEAD
 import axios from 'axios';
+=======
+>>>>>>> 055475162e907ec833646c1cbb801cddc3855f8e
 import {Link} from 'react-router';
 
 const About = React.createClass({
   render: function(){
     return(
-      <div>
-      <img className='groupPic' src="/app/images/group2.jpg" />
-      <p>We are students at General Assembly, studying web development. We wanted to create an app specifically for brunch in different neighborhoods in manhattan. Figuring out a great brunch place is always difficult so we wanted to make searching for brunch an easier process. Neighborhood search and filters should give the user a good understanding of the type of brunch restaurants are offering. Enjoy!</p>
+      <div className="group">
+         <img className='groupPic' src="/app/utilities/drew.jpg" />
+          <img className='groupPic' src="/app/utilities/matt.jpg" />
+      <p>WE JUST TWO BAD ASS MOFOS TRYING TO BUILD SOME STUFF</p>
 
       </div>
     );
