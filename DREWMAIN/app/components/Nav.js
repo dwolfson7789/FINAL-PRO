@@ -8,12 +8,12 @@ import About from './About';
 const Nav = React.createClass({
   render: function(){
     return(
-      <div className='nav-bar'>
+      <div className='cssmenu'>
         <nav className="nav">
          <h3 className='active'><a href='#'><span>HOME</span></a></h3>
          <Link to="/AddTip"><h3><span>ADD TIP</span></h3></Link>
          <Link to="/About"><h3><span>ABOUT</span></h3></Link>
-         <h3 className='last'><a href='atlmv077@aim.com'><span>CONTACT</span></a></h3>
+         <a href='atlmv077@aim.com'><span>CONTACT</span></a>
            <label>
           <select onChange={this.props.onChangeLocation}>
           <option placeholder='select location' value=''>select location</option>
