@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import {Link} from 'react-router';
+import Title from './Title';
+import Nav from './Nav';
 var url = 'http://localhost:3000/';
 
 // function AddTip(props) {
@@ -57,14 +59,15 @@ const AddTip = React.createClass({
     //console.log('params: ', this.props.params);
     return(
       <div className="tip">
+        <Title></Title>
+        <Nav></Nav>
         <form onSubmit={this.onSubmitTip}>
-          <h3>ADD A SITCH:</h3> <br/>
+          <h4>ADD A SITCH:</h4> <br/>
           <br/>
           <input onChange={this.onChangeAuthor} placeholder='your name' type='text' /><br/><br/>
           <input onChange={this.onChangeTip} placeholder='tip' type='text' /><br/><br/>
           <button type='submit'>Submit</button>
           <h4>{this.state.message}</h4>
-          <Link to="/">Back to Home</Link>
         </form>
       </div>
     );

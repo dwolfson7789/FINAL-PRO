@@ -13,7 +13,7 @@ const Home  = React.createClass({
         let userLat = position.coords.latitude;
         let userLong = position.coords.longitude;
         L.mapbox.accessToken = 'pk.eyJ1IjoiZHJld3dvbGZzb24xIiwiYSI6ImNpbnFoNHYyNjEwNTl1a2x5Mmw4Y2djZG8ifQ.B7cFyV9ktmmLD0y9bdUhIw';
-        Window.map = L.mapbox.map('map', 'mapbox.streets').setView(([userLat, userLong]||[40.7527, -73.9772]), 19) .addControl(L.mapbox.geocoderControl('mapbox.places', {
+        Window.map = L.mapbox.map('map', 'mapbox.outdoors').setView(([userLat, userLong]||[40.7527, -73.9772]), 15) .addControl(L.mapbox.geocoderControl('mapbox.places', {
         autocomplete: true
     })); L.mapbox.featureLayer()
       .setGeoJSON([

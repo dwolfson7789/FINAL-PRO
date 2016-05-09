@@ -4,9 +4,9 @@
 }
 
 img {
-  height: 220px;
-  width: 43%;
-  padding-bottom: 3px;
+  height: 13rem;
+  width: 42rem;
+
 }
 nav {
   text-align: center;
@@ -14,7 +14,7 @@ nav {
   width: 100%;
   height: auto;
   opacity: 0.6;
-  padding: 12px;
+  padding: 10px;
   border: 2px solid black;
 
 }
@@ -33,16 +33,24 @@ h2 {
 
 h3 {
   display: inline;
-  padding: 20px;
   border-right: 2px white;
+  padding: 10px;
+}
+
+h4 {
+  padding: 10px;
 }
 
 
 nav a {
   text-decoration: none;
   color: white;
-  font-size: 20px;
-  padding: 30px;
+  font-size: 1rem;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+nav a:hover{
+  color: black;
 }
 select {
     border: 0 none;
@@ -59,9 +67,9 @@ select {
   position:absolute;
   top:0;
   bottom:0;
-  margin-top: 14%;
+  margin-top: 13%;
   width:100%;
-  height: 87%;
+  height: 100rem;
 
 }
 
@@ -78,8 +86,8 @@ select {
 }
 .drew {
   padding: 10px;
-  width: 900px;
-  height: 400px;
+  width: 700px;
+  height: 300px;
   margin-top: 5%;
 
 

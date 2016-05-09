@@ -4,7 +4,6 @@ import Main from '../components/Main';
 import AddTip from '../components/AddTip';
 import About from '../components/About';
 import Nav from '../components/Nav';
-
 import Title from '../components/Title';
 import Home from '../components/Home';
 
